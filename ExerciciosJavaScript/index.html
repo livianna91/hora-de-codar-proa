@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+  /*  Escreva um programa em Javascript e crie uma variável chamada "nome_do_carro" e atribua-a um valor "Fusca". Exiba-a ao usuário. */
+  var nome_do_carro = "Fusca";
+  alert(nome_do_carro)
+ console.log(nome_do_carro)
+
+ /* Escreva um programa em Javascript em que o usuário informe o seu nome e exiba a mensagem "Olá, [NomeDoUsuario]". */ 
+ let nome = prompt("Digite seu nome: ")
+
+alert("Olá, " + ' ' + nome)
+console.log("Olá, " + ' ' + nome)
+
+/* Escreva um programa em Javascript em que o usuário informe o seu nome e em seguida o programa perguntará a idade do usuário. Agora o programa deve exibir a mensagem "Olá, [NomeDoUsuario], sua idade é [idade]". */ 
+
+var nome1 = prompt("Por favor, digite seu nome:")
+var idade = prompt("Por favor, digite sua idade:")
+
+alert("Olá," + ' '+ nome1 +", sua idade é:" + ' ' + idade)
+
+
+/* Considerando a figura abaixo, escreva um programa para cada forma que calcule e exiba em tela cada uma de suas respectivas áreas. O usuário irá informar os valores de cada variável.*/ 
+
+alert("Area de Figuras Planas")
+    console.log("Area de Figuras Planas")
+
+    let base = prompt("Digite a base do retangulo: ")
+    let altura = prompt("Digite a altura do retangulo: ")
+    let retangulo = base * altura
+    alert("A area do retangulo e: " + retangulo)
+    console.log("A area do retangulo e: " + retangulo)
+
+    let lado = prompt("Digite o lado do quadrado: ")
+    let quadrado = lado * lado
+    alert("A area do quadrado e: " + quadrado)
+    console.log("A area do quadrado e: " + quadrado)
+
+    let digma = prompt("Digite a diagonal maior: ")
+    let digme = prompt("Digite a diagonal menor: ")
+    let losango = (digma * digme) / 2
+    alert("A area do losango e: " + losango)
+    console.log("A area do losango e: " + losango)
+
+    let basema = prompt("Digite a base maior: ")
+    let baseme = prompt("Digite a base menor: ")
+    let alturatrap = prompt("Digite a altura do trapezio: ")
+    let trapezio = ((basema + baseme) * alturatrap) / 2 
+    alert("A area do trapezio e: " + trapezio)
+    console.log("A area do trapezio e: " + trapezio)
+
+    let baseparalelo = prompt("Digite a base do paralelogramo: ")
+    let alturapara = prompt("Digite a altura do paralelogramo: ")
+    let paralelogramo = baseparalelo * alturapara
+    alert("A area do paralelogramo e: " + paralelogramo)
+    console.log("A area do paralelogramo e: " + paralelogramo)
+
+    let basetri = prompt("Digite a base do triangulo: ")
+    let alturatri = prompt("Digite a altura do triangulo: ")
+    let triangulo = alturatri * basetri
+    alert("A area do triangulo e: " + triangulo)
+    console.log("A area do triangulo e: " + triangulo)
+
+    let raio = prompt("Digite o raio do circulo: ")
+    const pi = 3.14 
+    let circulo = (raio * raio) * pi
+    alert("A area do circulo e: " + circulo)
+    console.log("A area do circulo e: " + circulo)
+ </script>   
+</body>
+</html>

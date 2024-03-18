@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 1 - Escreva um algoritmo para ler 2 valores informados pelo usuário e se o segundo valor informado for igual ou menor que ZERO, deve ser lido um novo valor. Ou seja, para o segundo valor não pode ser aceito o valor zero, nem um valor negativo.  O seu programa deve imprimir o resultado da divisão do primeiro valor lido pelo segundo valor. */ 
+        let loop = true
+
+    let num1 = parseInt(prompt("Digite o primeiro valor: "))
+    let num2 = parseInt(prompt("Digite o segundo valor: "))
+    while (num2 <= 0 && loop == true) {
+      let num2 = parseInt(prompt("Digite o segundo valor: "))
+      if (num2 >= 1) {
+        loop = false
+      }
+    }
+
+    let resultado = num1 / num2 
+
+    alert("O resultado e: " + resultado)
+    console.log("O resultado e: " + resultado)
+
+    /* 2 - Crie uma bomba relógio (usando somente código - para deixar claro!) cuja contagem regressiva vá de 30 a 0. Utilize "document.write" para escrever em tela e no final da repetição escreva "EXPLOSÃO". */ 
+
+    for (let i = 30; i >= 0; i--) {
+      document.write(" " + i)
+    }
+    document.write(" EXPLOSAO")
+
+ /* 3 - Escreva um algoritmo para imprimir os números de 1 (inclusive) a 10 (inclusive) em ordem decrescente. */
+
+    for (let i = 10; i >= 0; i--) {
+      document.write(" " + i)
+      console.log(i)
+    }
+
+    /*  4 - Faça um algoritmo que calcule e escreva a média aritmética dos números inteiros entre 15 (inclusive) e 100 (inclusive). */
+    let soma = 0;
+
+    for (let i = 15; i < 100; i++) {
+      document.write(" " + i)
+      soma += parseInt(i)
+    }
+
+    let divisao = soma / (100 - 85)
+
+    alert(divisao)
+    console.log(divisao)
+
+    /*  5 - Faça um algoritmo que calcule e escreva a média aritmética dos dois números inteiros informados pelo usuário e todos os números inteiros entre eles. Considere que o primeiro sempre será menor que o segundo. */ 
+    let nm1 = parseInt(prompt("Digite o primeiro numero: "))
+    let nm2 = parseInt(prompt("Digite o segundo numero: "))
+
+    for (nm1; nm1 <= nm2; nm1++) {
+      let media = (nm1 + nm2) / 2
+      document.write(media + " ")
+    }
+
+    /* 6 - Escreva um programa para ler 2 notas de um aluno, calcular e imprimir a média final. Considere que a nota de aprovação é 9,5. Logo após escrever a mensagem "Calcular a média de outro aluno Sim/Não?" e solicitar um resposta. Se a resposta for "S", o programa deve ser executado novamente, caso contrário deve ser encerrado exibindo a quantidade de alunos aprovados. */ 
+
+    let lop = true
+
+while (lop == true) {
+  let nu1 = parseFloat(prompt("Digite o primeiro numero: "))
+  let nu2 = parseFloat(prompt("Digite o segundo numero: "))
+
+  let media = (nu1 + nu2) / 2
+
+  if (media >= 9.5) {
+    alert("Aprovado")
+  }
+  if (media < 9.5) {
+    alert("Reprovado")
+  }
+
+  let continuar = prompt("Continuar? S ou N: ")
+
+  if (continuar == "S" || continuar == "s") {
+    lop = true
+  } else if (continuar == "N" || continuar == "n") {
+    lop = false
+  } else {
+    alert("Comando Errado")
+  }
+}
+
+/* 7 - Escreva um algoritmo para ler as notas de avaliações de um aluno, calcule e imprima a média (simples) desse aluno. Só devem ser aceitos valores válidos durante a leitura (0 a 10) para cada nota. São 6 notas ao total.
+Caso o valor informado para qualquer uma das notas esteja fora do limite estabelecido, deve ser solicitado um novo valor ao usuário.  */ 
+
+let soma1 = 0
+
+for (let i = 1; i <= 6; i++) {
+
+  let num = {}
+
+  let loop1 = true
+
+  num[i] = parseFloat(prompt("Digite o " + [i] + " numero: "))
+  while ((num[i] < 0 || num[i] > 10) && loop == true) {
+    num[i] = parseFloat(prompt("Digite o " + [i] + " numero: "))
+    if (num[i] >= 0 && num[i] <= 10) {
+      loop = false
+    }
+  }
+  soma1 += num[i]
+
+}
+
+let media1 = soma1 / 6
+
+alert("A media do aluno e: " + media1)
+
+/*  8 - Ler um valor N e imprimir todos os valores inteiros entre 1 (inclusive) e N (inclusive). Considere que o N será sempre maior que ZERO.
+N  é um valor informado pelo usuário */ 
+let soma2 = 0;
+
+let n = parseInt(prompt("Digite ate que valor voce deseja imprimir (deve ser maior que zero): " ))
+
+for (let i = 0; i <= n; i++) {
+  document.write(" " + i)
+}
+
+alert("Foi de " + 0 + "ate " + n)
+console.log("Foi de " + 0 + " ate " + n)
+
+/* 9 - Escreva um algoritmo para imprimir os 10 primeiros números inteiros maiores que 100. */
+for (let i = 0; i < 150; i++) {
+      if (i > 100 & i <= 110)
+      document.write(" " + i)
+    }
+
+    /* 10 - Escreva um programa para imprimir todas as tabuadas de 1 a N. N será informado pelo usuário. */ 
+    let h = parseInt(prompt("Digite ate que valor voce deseja a tabuada: " ))
+    alert("Abra o console!") 
+
+    for (let i = 1; i <= h; i++) {
+      for (let a = 1; a <= 10; a++) {
+      console.log("Tabuada" + "\n" +
+      i + "x" + a + "=" + (i * a))
+      }
+    }
+
+    /* 11 - Escreva um programa em que o usuário informe 10 valores e escreva quantos desses valores lidos estão entre os números 24 e 42 (incluindo os valores 24 e 42) e quantos deles estão fora deste intervalo. */ 
+    let entre = 0
+    let fora = 0
+
+    for (let i = 1; i <= 10; i++) {
+
+      let num = {}
+
+      num[i] = parseFloat(prompt("Digite o " + [i] + " numero: "))
+      if (num[i] >= 24 && num[i] <= 42) {
+        entre++
+      } else {
+        fora++
+      }
+    }
+
+    alert(entre + " numeros estao entre 24 e 42" + "\n" + fora + " numeros nao estao entre 24 e 42")
+    console.log(entre + " numeros estao entre 24 e 42" + "\n" + fora + " numeros nao estao entre 24 e 42")
+
+    </script>
+</body>
+</html>
