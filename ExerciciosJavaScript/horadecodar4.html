@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ /* Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles.  */ 
+ let listaEst = []
+
+let loop = true
+
+while (loop == true) {
+  for (let i = 0; loop == true; i++) {
+    listaEst[i] = prompt("Digite o nome do estudante: ")
+
+    if (listaEst[i] == "PARE") {
+      loop = false
+      console.log(listaEst)
+      alert(listaEst + ", Numero de Estudantes: " + listaEst.length)
+    } 
+  }
+}
+
+listaEst = {}
+
+/* Crie uma array de planetas que inclua "Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"  e, em seguida, peça ao usuário para digitar o nome de um planeta. 
+
+Verifique se o planeta que o usuário informou está na array e informe ao usuário. */ 
+let listaPlaneta = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"]
+
+    let planeta = prompt("Digite o planeta que voce deseja colocar na lista: ")
+
+    if (listaPlaneta.includes(planeta)) {
+      alert("O " + planeta + " esta na lista")
+    } else {
+      alert("O " + planeta + " nao esta na lista")
+    }
+
+    console.log(listaPlaneta)
+    alert(listaPlaneta)
+
+
+    /* Vamos criar uma lista de compras. 
+
+Crie uma array de frutas, exiba-a ao usuário e, em seguida, peça ao usuário para digitar o nome de uma das frutas.
+
+Caso a fruta esteja no array, remova-a e exiba a mensagem "Fruta foi retirada da lista". 
+
+Peça novamente para o usuário digitar o nome de uma fruta para ser removida. 
+
+Sempre que o usuário procurar por uma fruta que não está no array exiba a mensagem "Fruta indisponível no nosso mercado". 
+
+Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".
+ */ 
+
+ let frutas = ["Uva", "Banana"]
+
+let loop1 = true
+
+while (loop1 == true) {
+
+  let fruta = prompt("Digite o nome de uma das frutas: ")
+
+  let index = frutas.indexOf(fruta)
+
+  if (index > -1) {
+    frutas.splice(index, 1);
+    alert("A fruta foi removida da lista")
+  } else {
+    alert("A fruta nao existe na lista")
+  }
+  
+  if (frutas.length < 1) {
+    alert("Lista de compras finalizada")
+    loop1 = false
+  }
+
+}
+    </script>
+</body>
+</html>
